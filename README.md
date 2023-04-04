@@ -3,7 +3,7 @@
 
 To perform Data preprocessing in a data set downloaded from Kaggle
 
-##REQUIPMENTS REQUIRED:
+## REQUIPMENTS REQUIRED:
 Hardware – PCs
 Anaconda – Python 3.7 Installation / Google Colab /Jupiter Notebook
 
@@ -41,18 +41,12 @@ df.drop(["RowNumber","Age","Gender","Geography","Surname"],inplace=True,axis=1)
 print(df)
 x=df.iloc[:,:-1].values
 y=df.iloc[:,-1].values
-print(x)
-print(y)
 from sklearn.preprocessing import MinMaxScaler
 scaler = MinMaxScaler()
 df1 = pd.DataFrame(scaler.fit_transform(df))
 print(df1)
 from sklearn.model_selection import train_test_split
 xtrain,ytrain,xtest,ytest=train_test_split(x,y,test_size=0.2,random_state=2)
-print(xtrain)
-print(len(xtrain))
-print(xtest)
-print(len(xtest))
 from sklearn.preprocessing import StandardScaler
 sc = StandardScaler()
 df1 = sc.fit_transform(df)
@@ -60,7 +54,9 @@ print(df1)
 ```
 
 ## OUTPUT:
-/ Show the result/
+
+![Screenshot 2023-04-04 111833](https://user-images.githubusercontent.com/75234807/229699588-9529cf60-9efe-42a3-a951-977c451e7848.png)
+![Screenshot 2023-04-04 111949](https://user-images.githubusercontent.com/75234807/229699611-fb5329fe-f4a1-4050-9bfc-1fa98ed98771.png)
 
 ## RESULT
-/Type your result here/
+Thus, data preprocessing is successfully implemented for a dataset from kaggle.
